@@ -1,17 +1,17 @@
 "use strict";
 // 🕮 <YL> 0a98bc14-fce2-44e3-9ee7-f28ca7257342.md
 
-var active = [];
+const active = [];
 
-var Detector = function(selector, callOptions) {
+const Detector = function(selector, callOptions) {
   // 🕮 <YL> 9f390b47-b78a-4896-9aa0-3046389f0e26.md
 
-  var elements = document.querySelectorAll(selector);
+  const elements = document.querySelectorAll(selector);
   if (elements.length === 0) {
     console.error("ovfDetector error: no elements match selector");
     return;
   }
-  var options = setOptions(callOptions);
+  let options = setOptions(callOptions);
   document.addEventListener("keydown", handler);
 
   function setOptions(options) {
@@ -37,7 +37,7 @@ var Detector = function(selector, callOptions) {
     if (event.keyCode == options.keyCode) {
       // 🕮 <YL> 2c1d3283-0d8b-4333-ad85-2e2b0459ca34.md
       // "O"
-      var result = binarySearch({
+      const result = binarySearch({
         left: options.wmin,
         right: options.wmax,
         tolerance: 1,
@@ -56,7 +56,7 @@ var Detector = function(selector, callOptions) {
   function binarySearch(o) {
     // @outdated 🕮 <YL> 0eb039dd-8ce9-4fb9-917e-b64d26219ce2.md
     // 🕮 <YL> fb5ac7b8-a3aa-4180-ba73-1759f5a2a749.md
-    var mid,
+    let mid,
       result,
       ovfCount = 0,
       i = 0;
@@ -89,7 +89,7 @@ var Detector = function(selector, callOptions) {
     document.documentElement.style.width = mid + "px";
 
     return Array.prototype.some.call(elements, function(el) {
-      var condition;
+      let condition;
       if (options.verticalOverflow) {
         condition =
           el.clientWidth < el.scrollWidth ||
