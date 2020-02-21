@@ -1,7 +1,7 @@
 # overflow-detector
 
 A little utility for responsive web design implementation, whose purpose is to facilitate tuning media queries.
-If you have specific HTML element with some content, which is likely to cause overflow when shrinking (often it is text content) this script will help you to determine at which viewport width exactly overflow happens without manually tedious manual viewport changing. Then you can easily set media query for this element at specified point to prevent overflow.
+If you have specific HTML element with some content, which is likely to cause overflow when shrinking (often it is text content) this script will help you to determine at which viewport width exactly overflow happens without tedious manual viewport changing. Then you can easily set media query for this element at specified point to prevent overflow.
 This script uses a binary search algorithm between minimum and maximum viewport values (see [options](#options)).
 
 ## Usage

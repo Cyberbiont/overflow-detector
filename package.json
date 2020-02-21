@@ -1,0 +1,17 @@
+{
+  "name": "overflow-detector",
+  "version": "1.0.0",
+  "description": "Detect viewport width at whicn content overflow happens on HTML element",
+  "main": "overflow-detector.js",
+  "keywords": [
+    "overflow",
+    "viewport"
+  ],
+  "author": {
+    "name": "Yaroslav Larin",
+    "email": "cyberbiont@gmail.com"
+  },
+	"repository": "https://github.com/cyberbiont/overflow-detector",
+	"issues": " https://github.com/cyberbiont/overflow-detector/issues",
+  "license": "MIT"
+}
